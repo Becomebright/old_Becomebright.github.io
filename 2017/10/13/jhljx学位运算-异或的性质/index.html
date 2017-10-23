@@ -328,7 +328,7 @@
 <hr>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="理论基础"><a href="#理论基础" class="headerlink" title="理论基础"></a>理论基础</h3><p>异或有几个重要的性质，题目中也已给出：<code>a^a=0,a^b=c,a^c=b</code></p>
 <p>下面来证明<code>若 a^b=c 则 a^c=b</code>：</p>
-<p>a^b = c –&gt; a^b^c = 0 –&gt; a^b^c^b = a^c^b^b = a^c^0 = a^c = b 证毕</p>
+<p>a^b = c —&gt; a^b^c = 0 —&gt; a^b^c^b = a^c^b^b = a^c^0 = a^c = b 证毕</p>
 <p>此结论是解决本题的有利工具。</p>
 <h3 id="实际算法"><a href="#实际算法" class="headerlink" title="实际算法"></a>实际算法</h3><p>要解决的问题是求一个子数组的异或值之和。</p>
 <p>设输入数组为x[]</p>
@@ -709,26 +709,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
   
 
 
