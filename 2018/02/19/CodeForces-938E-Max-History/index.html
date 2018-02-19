@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="日记," />
+  <meta name="keywords" content="题解," />
 
 
 
@@ -69,18 +69,18 @@
 
 
 
-<meta name="description" content="Java大作业的DDL临近，我们宿舍三人决定制作一个能联机的小游戏。 开始的时候设想很宏大，想做一个PUBG的2D版，能捡枪、捡子弹、射击，有毒圈、掩体等等。但真正做起来，才知道实现这些功能的困难，我仅仅负责一个联机功能，花了一下午加一晚上，才看懂了一个聊天室的demo，第二天才着手将它改造成联机对战功能。其实这东西原理很简单，就是一个客户端Client，一个服务端Server，Client负责向">
-<meta name="keywords" content="日记">
+<meta name="description" content="http://codeforces.com/contest/938/problem/E Tag: 组合数学 题意题目说了一大堆，简单来说是这样的： n个数ai，对于它们的某个排列，求该排列单调上升队列除最后一个元素外的和，最终求所有n!个排列的和。 如1, 2, 2, 3四个数的一个排列1 2 2 3，单调上升队列为1 2 3，除最后一个元素的和就是1+2=3 思路不单独考虑某个排列的情况，而是考">
+<meta name="keywords" content="题解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初次制作联机小游戏">
-<meta property="og:url" content="http://yoursite.com/2017/12/31/初次制作联机小游戏/index.html">
+<meta property="og:title" content="CodeForces 938E Max History">
+<meta property="og:url" content="http://yoursite.com/2018/02/19/CodeForces-938E-Max-History/index.html">
 <meta property="og:site_name" content="SE">
-<meta property="og:description" content="Java大作业的DDL临近，我们宿舍三人决定制作一个能联机的小游戏。 开始的时候设想很宏大，想做一个PUBG的2D版，能捡枪、捡子弹、射击，有毒圈、掩体等等。但真正做起来，才知道实现这些功能的困难，我仅仅负责一个联机功能，花了一下午加一晚上，才看懂了一个聊天室的demo，第二天才着手将它改造成联机对战功能。其实这东西原理很简单，就是一个客户端Client，一个服务端Server，Client负责向">
+<meta property="og:description" content="http://codeforces.com/contest/938/problem/E Tag: 组合数学 题意题目说了一大堆，简单来说是这样的： n个数ai，对于它们的某个排列，求该排列单调上升队列除最后一个元素外的和，最终求所有n!个排列的和。 如1, 2, 2, 3四个数的一个排列1 2 2 3，单调上升队列为1 2 3，除最后一个元素的和就是1+2=3 思路不单独考虑某个排列的情况，而是考">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-31T08:29:26.079Z">
+<meta property="og:updated_time" content="2018-02-19T15:55:21.085Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初次制作联机小游戏">
-<meta name="twitter:description" content="Java大作业的DDL临近，我们宿舍三人决定制作一个能联机的小游戏。 开始的时候设想很宏大，想做一个PUBG的2D版，能捡枪、捡子弹、射击，有毒圈、掩体等等。但真正做起来，才知道实现这些功能的困难，我仅仅负责一个联机功能，花了一下午加一晚上，才看懂了一个聊天室的demo，第二天才着手将它改造成联机对战功能。其实这东西原理很简单，就是一个客户端Client，一个服务端Server，Client负责向">
+<meta name="twitter:title" content="CodeForces 938E Max History">
+<meta name="twitter:description" content="http://codeforces.com/contest/938/problem/E Tag: 组合数学 题意题目说了一大堆，简单来说是这样的： n个数ai，对于它们的某个排列，求该排列单调上升队列除最后一个元素外的和，最终求所有n!个排列的和。 如1, 2, 2, 3四个数的一个排列1 2 2 3，单调上升队列为1 2 3，除最后一个元素的和就是1+2=3 思路不单独考虑某个排列的情况，而是考">
 
 
 
@@ -110,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/31/初次制作联机小游戏/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/19/CodeForces-938E-Max-History/"/>
 
 
 
 
 
-  <title>初次制作联机小游戏 | SE</title>
+  <title>CodeForces 938E Max History | SE</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/31/初次制作联机小游戏/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/CodeForces-938E-Max-History/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SE">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初次制作联机小游戏</h1>
+          <h1 class="post-title" itemprop="name headline">CodeForces 938E Max History</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-31T16:01:37+08:00">
-                2017-12-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-19T23:36:55+08:00">
+                2018-02-19
               </time>
             
 
@@ -280,9 +280,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/12/31/初次制作联机小游戏/#comments" itemprop="discussionUrl">
+                <a href="/2018/02/19/CodeForces-938E-Max-History/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/31/初次制作联机小游戏/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/02/19/CodeForces-938E-Max-History/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -310,10 +310,21 @@
       
 
       
-        <p>Java大作业的DDL临近，我们宿舍三人决定制作一个能联机的小游戏。</p>
-<p>开始的时候设想很宏大，想做一个PUBG的2D版，能捡枪、捡子弹、射击，有毒圈、掩体等等。但真正做起来，才知道实现这些功能的困难，我仅仅负责一个联机功能，花了一下午加一晚上，才看懂了一个聊天室的demo，第二天才着手将它改造成联机对战功能。其实这东西原理很简单，就是一个客户端Client，一个服务端Server，Client负责向Server发送消息，Server不进行任何计算，只是把消息发送给其它客户端，起一个“中转站”的作用。但是这里面用到了我从来没接触过的网络编程和多线程编程，只好不停的利用百度优先搜索，光浏览器窗口就开了十几个，看着就心烦，形形色色的异常也遇到了十几种。</p>
-<p>但是当测试通过，我这里的客户端收到姜局的客户端发来的消息的时候，真有种《三体》里人类第一次收到外星人信号的感觉，兴奋的喊出了声。我们生活在互联网的世界里，手机从来不离身，接收一条微信，发送一段语音，看一个视频，对我来说是再寻常不过的事情，直到自己动手，才真正感受到网络的存在。</p>
-<p>你在电脑上按下一个按键，屏幕上的人物移动了一格的距离。于此同时，在地球上的某处，另一个人也看到了这个人物的移动，这难道不是一种奇迹么？</p>
+        <p><a href="http://codeforces.com/contest/938/problem/E" target="_blank" rel="external">http://codeforces.com/contest/938/problem/E</a></p>
+<p>Tag: 组合数学</p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>题目说了一大堆，简单来说是这样的：</p>
+<p>n个数ai，对于它们的某个排列，求该排列单调上升队列除最后一个元素外的和，最终求所有<script type="math/tex">n!</script>个排列的和。</p>
+<p>如1, 2, 2, 3四个数的一个排列1 2 2 3，单调上升队列为1 2 3，除最后一个元素的和就是1+2=3</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>不单独考虑某个排列的情况，而是考虑某个数在答案中出现的次数。</p>
+<p><strong>某个数<script type="math/tex">a_i</script>要对答案有贡献，必须满足比它大的数都在它的后面，且它不是最大的。</strong>根据这个原则，<strong>统计某个数在答案中出现的个数</strong>。</p>
+<p><em>ps. 等于<script type="math/tex">a_i</script>的数怎么办呢？题目中说把这些数当作与<script type="math/tex">a_i</script>不同的数，那么为了加以区分，不重复统计，可以把它们当作大于<script type="math/tex">a_i</script>的数。</em></p>
+<p>先将这n个数进行升序排序，对于某个数<script type="math/tex">a_i</script>，求出小于它的元素个数below，大于等于(不包括<script type="math/tex">a_i</script>)它的元素个数above</p>
+<p><strong>那么<script type="math/tex">a_i</script>对答案的贡献 <script type="math/tex">=a[i]\times A_{n}^{below}\times {above}!</script></strong></p>
+<p>含义是，由于<strong>比<script type="math/tex">a_i</script>大的数都在它的后面</strong>，可先将比<script type="math/tex">a_i</script>小的元素填入，共<script type="math/tex">A_{n}^{below}</script>种 ，接着将<script type="math/tex">a_i</script>填入最靠前的空中，最后把剩下的数填入，共<script type="math/tex">{above}!</script>种，从中也可看出<script type="math/tex">above = n - below - 1</script></p>
+<p>答案就是每个<script type="math/tex">a_i</script>的贡献求和，注意取模。</p>
+<hr>
+<p>总复杂度为<script type="math/tex">O(nlogn)</script>，因为排序<script type="math/tex">O(nlogn)</script>，求和<script type="math/tex">O(n)</script></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line"></div><div class="line"><span class="keyword">const</span> LL N = <span class="number">1e6</span>+<span class="number">7</span>;</div><div class="line"><span class="keyword">const</span> LL MO = <span class="number">1e9</span>+<span class="number">7</span>;</div><div class="line">LL a[N];</div><div class="line">LL J[N], A[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    J[<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;N; i++) J[i] = J[i<span class="number">-1</span>] * i % MO;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">    A[<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) A[i] = A[i<span class="number">-1</span>]*(n-i+<span class="number">1</span>)%MO;</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) <span class="built_in">scanf</span>(<span class="string">"%I64d"</span>, &amp;a[i]);</div><div class="line">    sort(a, a+n);</div><div class="line"></div><div class="line">    LL cnt = <span class="number">1</span>, below = <span class="number">0</span>, above = n<span class="number">-1</span>;</div><div class="line">    LL ans = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(a[i]==a[i<span class="number">-1</span>])</div><div class="line">            cnt++;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            ans = (ans + a[i<span class="number">-1</span>]*cnt%MO*A[below]%MO*J[above]%MO) % MO;</div><div class="line">            cnt = <span class="number">1</span>, below = i, above = n-i<span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -331,7 +342,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/日记/" rel="tag"># 日记</a>
+            <a href="/tags/题解/" rel="tag"># 题解</a>
           
         </div>
       
@@ -344,8 +355,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/23/DSZ的板子/" rel="next" title="DSZ的板子">
-                <i class="fa fa-chevron-left"></i> DSZ的板子
+              <a href="/2018/02/19/CodeForces-938D-Buy-a-Ticket/" rel="next" title="CodeForces 938D Buy a Ticket">
+                <i class="fa fa-chevron-left"></i> CodeForces 938D Buy a Ticket
               </a>
             
           </div>
@@ -353,10 +364,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/11/Desperate/" rel="prev" title="Desperate">
-                Desperate <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -415,8 +422,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">SE</p>
@@ -482,6 +498,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -622,9 +654,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/12/31/初次制作联机小游戏/';
-          this.page.identifier = '2017/12/31/初次制作联机小游戏/';
-          this.page.title = '初次制作联机小游戏';
+          this.page.url = 'http://yoursite.com/2018/02/19/CodeForces-938E-Max-History/';
+          this.page.identifier = '2018/02/19/CodeForces-938E-Max-History/';
+          this.page.title = 'CodeForces 938E Max History';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Becomebright.disqus.com/embed.js';
