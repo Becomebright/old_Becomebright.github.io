@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="题解," />
 
 
 
@@ -69,14 +69,18 @@
 
 
 
+<meta name="description" content="http://codeforces.com/contest/938/problem/D 题意有n个城市，都要举办演唱会，票价为ai，有m条双向有权边连接各城市，求从每个城市出发，看一场演唱会再返回的最小花费。 思路可以将问题转化为最短路问题：添加一个超级源点，它到每个城市都有一条权为ai的边。将其它边的权翻倍，即可解决往返的问题。求超级源点到各城市的最短路，即为所求的最小花费。 用Dijkstra">
+<meta name="keywords" content="题解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="零崎的补番计划Ⅱ(0-1背包)">
-<meta property="og:url" content="http://yoursite.com/2017/10/27/零崎的补番计划Ⅱ-0-1背包/index.html">
+<meta property="og:title" content="CodeForces 938D Buy a Ticket">
+<meta property="og:url" content="http://yoursite.com/2018/02/19/CodeForces-938D-Buy-a-Ticket/index.html">
 <meta property="og:site_name" content="SE">
+<meta property="og:description" content="http://codeforces.com/contest/938/problem/D 题意有n个城市，都要举办演唱会，票价为ai，有m条双向有权边连接各城市，求从每个城市出发，看一场演唱会再返回的最小花费。 思路可以将问题转化为最短路问题：添加一个超级源点，它到每个城市都有一条权为ai的边。将其它边的权翻倍，即可解决往返的问题。求超级源点到各城市的最短路，即为所求的最小花费。 用Dijkstra">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-27T06:57:36.165Z">
+<meta property="og:updated_time" content="2018-02-19T13:51:32.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="零崎的补番计划Ⅱ(0-1背包)">
+<meta name="twitter:title" content="CodeForces 938D Buy a Ticket">
+<meta name="twitter:description" content="http://codeforces.com/contest/938/problem/D 题意有n个城市，都要举办演唱会，票价为ai，有m条双向有权边连接各城市，求从每个城市出发，看一场演唱会再返回的最小花费。 思路可以将问题转化为最短路问题：添加一个超级源点，它到每个城市都有一条权为ai的边。将其它边的权翻倍，即可解决往返的问题。求超级源点到各城市的最短路，即为所求的最小花费。 用Dijkstra">
 
 
 
@@ -106,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/27/零崎的补番计划Ⅱ-0-1背包/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/19/CodeForces-938D-Buy-a-Ticket/"/>
 
 
 
 
 
-  <title>零崎的补番计划Ⅱ(0-1背包) | SE</title>
+  <title>CodeForces 938D Buy a Ticket | SE</title>
   
 
 
@@ -228,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/27/零崎的补番计划Ⅱ-0-1背包/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/CodeForces-938D-Buy-a-Ticket/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SE">
@@ -245,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">零崎的补番计划Ⅱ(0-1背包)</h1>
+          <h1 class="post-title" itemprop="name headline">CodeForces 938D Buy a Ticket</h1>
         
 
         <div class="post-meta">
@@ -257,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-27T14:57:36+08:00">
-                2017-10-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-19T21:39:54+08:00">
+                2018-02-19
               </time>
             
 
@@ -276,9 +280,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/10/27/零崎的补番计划Ⅱ-0-1背包/#comments" itemprop="discussionUrl">
+                <a href="/2018/02/19/CodeForces-938D-Buy-a-Ticket/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/27/零崎的补番计划Ⅱ-0-1背包/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/02/19/CodeForces-938D-Buy-a-Ticket/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -306,7 +310,14 @@
       
 
       
-        
+        <p><a href="http://codeforces.com/contest/938/problem/D" target="_blank" rel="external">http://codeforces.com/contest/938/problem/D</a></p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>有n个城市，都要举办演唱会，票价为ai，有m条双向有权边连接各城市，求从每个城市出发，看一场演唱会再返回的最小花费。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>可以将问题转化为最短路问题：添加一个超级源点，它到每个城市都有一条权为ai的边。将其它边的权翻倍，即可解决往返的问题。求超级源点到各城市的最短路，即为所求的最小花费。</p>
+<p>用Dijkstra+堆优化即可在<script type="math/tex">O((n+m)logn</script>时间解决问题。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>邻接表，可以用vector+pair</p>
+<p>Dijkstra的堆优化，可以用set+pair</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2e5</span>+<span class="number">7</span>;</div><div class="line"><span class="built_in">vector</span>&lt; pair&lt;<span class="keyword">int</span>, LL&gt; &gt; E[N];</div><div class="line">LL dis[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="built_in">set</span>&lt; pair&lt;LL, <span class="keyword">int</span>&gt; &gt; Q;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">        Q.insert(&#123;dis[i], i&#125;);</div><div class="line">    <span class="keyword">while</span>(!Q.empty())&#123;</div><div class="line">        <span class="keyword">int</span> v = Q.begin()-&gt;second;</div><div class="line">        Q.erase(Q.begin());</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> it : E[v])&#123;</div><div class="line">            <span class="keyword">int</span> u = it.first;</div><div class="line">            LL w = it.second;</div><div class="line">            <span class="keyword">if</span>(dis[u] &gt; dis[v] + w)&#123;</div><div class="line">                Q.erase(&#123;dis[u], u&#125;);</div><div class="line">                dis[u] = dis[v] + w;</div><div class="line">                Q.insert(&#123;dis[u], u&#125;);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> n, m, v, u;</div><div class="line">	LL w;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%I64d"</span>, &amp;v, &amp;u, &amp;w);</div><div class="line">		E[v].push_back(&#123;u, <span class="number">2</span>*w&#125;);</div><div class="line">		E[u].push_back(&#123;v, <span class="number">2</span>*w&#125;);</div><div class="line">	&#125;</div><div class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">       <span class="built_in">scanf</span>(<span class="string">"%I64d"</span>, &amp;dis[i]);</div><div class="line">   Dijkstra(n);</div><div class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">       <span class="built_in">printf</span>(<span class="string">"%I64d "</span>, dis[i]);</div><div class="line">   <span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -321,6 +332,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/题解/" rel="tag"># 题解</a>
+          
+        </div>
+      
 
       
       
@@ -330,8 +347,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/26/四合归零-枚举/" rel="next" title="四合归零(枚举)">
-                <i class="fa fa-chevron-left"></i> 四合归零(枚举)
+              <a href="/2018/02/17/CodeForces-938C-Constructing-Tests/" rel="next" title="CodeForces 938C Constructing Tests">
+                <i class="fa fa-chevron-left"></i> CodeForces 938C Constructing Tests
               </a>
             
           </div>
@@ -339,10 +356,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/30/算法第二次上机解题报告/" rel="prev" title="算法第二次上机解题报告">
-                算法第二次上机解题报告 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -401,8 +414,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">SE</p>
@@ -468,6 +490,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -608,9 +646,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/10/27/零崎的补番计划Ⅱ-0-1背包/';
-          this.page.identifier = '2017/10/27/零崎的补番计划Ⅱ-0-1背包/';
-          this.page.title = '零崎的补番计划Ⅱ(0-1背包)';
+          this.page.url = 'http://yoursite.com/2018/02/19/CodeForces-938D-Buy-a-Ticket/';
+          this.page.identifier = '2018/02/19/CodeForces-938D-Buy-a-Ticket/';
+          this.page.title = 'CodeForces 938D Buy a Ticket';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Becomebright.disqus.com/embed.js';
