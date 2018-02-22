@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随想," />
+  <meta name="keywords" content="题解," />
 
 
 
@@ -69,20 +69,18 @@
 
 
 
-<meta name="description" content="《四月是你的谎言》花了几天的时间，看完了以音乐(钢琴)为主题的《四月是你的谎言》。 这部番，从标题就给人一种很文艺、很青春的感觉，很对我的口味，丛看第一话开始就被深深地吸引了，钢琴和小提琴的合奏是那样美妙，让我这个几乎没怎么碰过乐器的理工男，都有了想去学钢琴的冲动。 喜欢一个人，会因为她而变得积极向上，想到她就会不禁泛起笑容，也会因为她而变得喜怒无常，会因为她而编织许多谎言 。 如果我只剩下一两年">
-<meta name="keywords" content="随想">
+<meta name="description" content="http://codeforces.com/contest/919/problem/D Tag: DP/拓扑排序 题意一个有向图，每个结点存一个字符，路的长度定义为路径上出现最多的字符数，如”abaca”的长度为3，求最大路径长度。 注意：允许自环、多重边，图不一定连通。 思路DP+拓扑排序。 dp[i][j] 表示以顶点i为终点的所有路径，字符j出现的最大次数。 使用拓扑排序遍历图，deg[i]">
+<meta name="keywords" content="题解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《四月是你的谎言》">
-<meta property="og:url" content="http://yoursite.com/2017/09/26/《四月是你的谎言》/index.html">
+<meta property="og:title" content="CodeForces 919D Substring">
+<meta property="og:url" content="http://yoursite.com/2018/02/22/CodeForces-919D-Substring/index.html">
 <meta property="og:site_name" content="SE">
-<meta property="og:description" content="《四月是你的谎言》花了几天的时间，看完了以音乐(钢琴)为主题的《四月是你的谎言》。 这部番，从标题就给人一种很文艺、很青春的感觉，很对我的口味，丛看第一话开始就被深深地吸引了，钢琴和小提琴的合奏是那样美妙，让我这个几乎没怎么碰过乐器的理工男，都有了想去学钢琴的冲动。 喜欢一个人，会因为她而变得积极向上，想到她就会不禁泛起笑容，也会因为她而变得喜怒无常，会因为她而编织许多谎言 。 如果我只剩下一两年">
+<meta property="og:description" content="http://codeforces.com/contest/919/problem/D Tag: DP/拓扑排序 题意一个有向图，每个结点存一个字符，路的长度定义为路径上出现最多的字符数，如”abaca”的长度为3，求最大路径长度。 注意：允许自环、多重边，图不一定连通。 思路DP+拓扑排序。 dp[i][j] 表示以顶点i为终点的所有路径，字符j出现的最大次数。 使用拓扑排序遍历图，deg[i]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://chuantu.biz/t6/62/1506257584x1780951445.png">
-<meta property="og:updated_time" content="2017-10-25T04:39:19.154Z">
+<meta property="og:updated_time" content="2018-02-22T02:47:01.084Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《四月是你的谎言》">
-<meta name="twitter:description" content="《四月是你的谎言》花了几天的时间，看完了以音乐(钢琴)为主题的《四月是你的谎言》。 这部番，从标题就给人一种很文艺、很青春的感觉，很对我的口味，丛看第一话开始就被深深地吸引了，钢琴和小提琴的合奏是那样美妙，让我这个几乎没怎么碰过乐器的理工男，都有了想去学钢琴的冲动。 喜欢一个人，会因为她而变得积极向上，想到她就会不禁泛起笑容，也会因为她而变得喜怒无常，会因为她而编织许多谎言 。 如果我只剩下一两年">
-<meta name="twitter:image" content="http://chuantu.biz/t6/62/1506257584x1780951445.png">
+<meta name="twitter:title" content="CodeForces 919D Substring">
+<meta name="twitter:description" content="http://codeforces.com/contest/919/problem/D Tag: DP/拓扑排序 题意一个有向图，每个结点存一个字符，路的长度定义为路径上出现最多的字符数，如”abaca”的长度为3，求最大路径长度。 注意：允许自环、多重边，图不一定连通。 思路DP+拓扑排序。 dp[i][j] 表示以顶点i为终点的所有路径，字符j出现的最大次数。 使用拓扑排序遍历图，deg[i]">
 
 
 
@@ -112,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/26/《四月是你的谎言》/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/22/CodeForces-919D-Substring/"/>
 
 
 
 
 
-  <title>《四月是你的谎言》 | SE</title>
+  <title>CodeForces 919D Substring | SE</title>
   
 
 
@@ -234,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/26/《四月是你的谎言》/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/22/CodeForces-919D-Substring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SE">
@@ -251,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《四月是你的谎言》</h1>
+          <h1 class="post-title" itemprop="name headline">CodeForces 919D Substring</h1>
         
 
         <div class="post-meta">
@@ -263,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T00:26:22+08:00">
-                2017-09-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-22T10:33:43+08:00">
+                2018-02-22
               </time>
             
 
@@ -282,9 +280,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/09/26/《四月是你的谎言》/#comments" itemprop="discussionUrl">
+                <a href="/2018/02/22/CodeForces-919D-Substring/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/26/《四月是你的谎言》/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/02/22/CodeForces-919D-Substring/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -312,20 +310,23 @@
       
 
       
-        <h1 id="《四月是你的谎言》"><a href="#《四月是你的谎言》" class="headerlink" title="《四月是你的谎言》"></a>《四月是你的谎言》</h1><p>花了几天的时间，看完了以音乐(钢琴)为主题的《四月是你的谎言》。</p>
-<p>这部番，从标题就给人一种很文艺、很青春的感觉，很对我的口味，丛看第一话开始就被深深地吸引了，钢琴和小提琴的合奏是那样美妙，让我这个几乎没怎么碰过乐器的理工男，都有了想去学钢琴的冲动。</p>
-<p>喜欢一个人，会因为她而变得积极向上，想到她就会不禁泛起笑容，也会因为她而变得喜怒无常，会因为她而编织许多谎言 。</p>
-<p>如果我只剩下一两年的时间，能否让我住进你的心里？</p>
-<p>我会变成最美的样子，绽放最灿烂的笑容，走过这最后的时光。</p>
-<p>有人说世界上最傻的事就是默默地暗恋一个人，其实不是这样，世界上最傻的事，是互相暗恋。</p>
-<p>四月是你的谎言，因为你的谎言，我认识了你，也正因如此，我无法将心声说给你听，只能作为友人A、伴奏者、被喜欢的人的朋友存在着，却也因为你的笑容而抬起头来，走出了那痛苦的回忆，重拾钢琴，笑对生活。</p>
-<p>当你离开之后，又一个四月，我才解开了这个可爱的谎言。</p>
-<p>也许再也不会有人能让我如此开心的度过这个四月。</p>
-<p>Alice 世界上最孤独的鲸鱼 发出的频率是52赫兹 而正常鲸鱼是15至25赫兹 世上没任何鲸鱼能听懂它 它没有鱼群 没有同类 但它没放弃大海 从千里外的太平洋游到大西洋 纵然呐喊二十五年没人应答 但大海有多浩瀚它比别的鲸鱼都清楚。</p>
-<p>我也将一个人孤独的前行。</p>
-<p><strong>四月は君の嘘</strong></p>
-<p><strong>四月是你的谎言</strong></p>
-<p><img src="http://chuantu.biz/t6/62/1506257584x1780951445.png" alt=""></p>
+        <p><a href="http://codeforces.com/contest/919/problem/D" target="_blank" rel="external">http://codeforces.com/contest/919/problem/D</a></p>
+<p>Tag: DP/拓扑排序</p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>一个有向图，每个结点存一个字符，路的长度定义为路径上出现最多的字符数，如”abaca”的长度为3，求最大路径长度。</p>
+<p>注意：允许自环、多重边，图不一定连通。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>DP+拓扑排序。</p>
+<p><code>dp[i][j]</code> 表示以顶点i为终点的所有路径，字符j出现的最大次数。</p>
+<p>使用拓扑排序遍历图，<code>deg[i]记录i的入度</code>，初始将所有入度为0的点加入队列，当队列不空时进行以下操作：</p>
+<ul>
+<li>取队首顶点v，变量<code>cnt++</code></li>
+<li>遍历以v为起点的边，设终点为k，用<code>dp[k][0...25]</code>更新 <code>dp[v][0...25]</code></li>
+<li><code>deg[v]</code>减去1，若等于0，则将v加入队列</li>
+</ul>
+<p>当该图无环时，最终cnt=n，此时输出最大的<code>f[i][j]</code>.</p>
+<p>否则该图存在环，答案会是无穷大，此时输出<code>-1</code></p>
+<hr>
+<p>每条边会被遍历一次，此时更新dp数组，总时间复杂度为<script type="math/tex">O(mlog26)</script></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">3e5</span>+<span class="number">7</span>;</div><div class="line"><span class="keyword">int</span> dp[N][<span class="number">26</span>];</div><div class="line"><span class="keyword">int</span> deg[N];</div><div class="line"><span class="keyword">char</span> node[N];</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; E[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">topoSort</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; Q;</div><div class="line">    <span class="keyword">int</span> cnt = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">        <span class="keyword">if</span>(!deg[i])&#123;</div><div class="line">             Q.push(i);</div><div class="line">             dp[i][node[i]-<span class="string">'a'</span>] = <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    <span class="keyword">while</span>(!Q.empty())&#123;</div><div class="line">        <span class="keyword">int</span> v = Q.front(); Q.pop();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> it : E[v])&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">26</span>; i++)</div><div class="line">                dp[it][i] = max(dp[it][i], dp[v][i] + (i==node[it]-<span class="string">'a'</span>));</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(--deg[it] == <span class="number">0</span>) Q.push(it);</div><div class="line">        &#125;</div><div class="line">        cnt++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(cnt==n)&#123;</div><div class="line">        <span class="keyword">int</span> Max = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;<span class="number">26</span>; j++)</div><div class="line">                <span class="keyword">if</span>(dp[i][j] &gt; Max)</div><div class="line">                     Max = dp[i][j];</div><div class="line"></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; Max &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">cin</span>.sync_with_stdio(<span class="literal">false</span>);</div><div class="line">    <span class="keyword">int</span> n, m;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; (node+<span class="number">1</span>);</div><div class="line">    <span class="keyword">int</span> x, y;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++)&#123;</div><div class="line">        <span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;</div><div class="line">        E[x].push_back(y);</div><div class="line">        deg[y]++;</div><div class="line">    &#125;</div><div class="line">    topoSort(n);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -343,7 +344,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随想/" rel="tag"># 随想</a>
+            <a href="/tags/题解/" rel="tag"># 题解</a>
           
         </div>
       
@@ -356,8 +357,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/26/《月色真美》/" rel="next" title="《月色真美》">
-                <i class="fa fa-chevron-left"></i> 《月色真美》
+              <a href="/2018/02/21/CodeForces-934D-A-Determined-Cleanup/" rel="next" title="CodeForces 934D A Determined Cleanup">
+                <i class="fa fa-chevron-left"></i> CodeForces 934D A Determined Cleanup
               </a>
             
           </div>
@@ -365,10 +366,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/26/喝水/" rel="prev" title="喝水">
-                喝水 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -513,7 +510,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#《四月是你的谎言》"><span class="nav-number">1.</span> <span class="nav-text">《四月是你的谎言》</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -659,9 +656,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/09/26/《四月是你的谎言》/';
-          this.page.identifier = '2017/09/26/《四月是你的谎言》/';
-          this.page.title = '《四月是你的谎言》';
+          this.page.url = 'http://yoursite.com/2018/02/22/CodeForces-919D-Substring/';
+          this.page.identifier = '2018/02/22/CodeForces-919D-Substring/';
+          this.page.title = 'CodeForces 919D Substring';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Becomebright.disqus.com/embed.js';
