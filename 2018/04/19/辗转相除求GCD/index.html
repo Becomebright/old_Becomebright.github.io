@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="题解," />
+  <meta name="keywords" content="algorithm," />
 
 
 
@@ -69,18 +69,18 @@
 
 
 
-<meta name="description" content="http://codeforces.com/contest/938/problem/C 题意在一个n\times n的01矩阵中，要求每个m\times m 矩阵都至少要含一个0，求最大的1的数量。 现给定1的数量x，构造出n, m满足要求。 思路通过画图可以得到方程 x = n^2 - floor^2(n/m) ，给出x求n和m 接下来省略floor，化简得到 x = (n+n/m)(n-n/m">
-<meta name="keywords" content="题解">
+<meta name="description" content="定理若a \div b = k...r，则gcd(a,b)=gcd(b,r)。 证明设 gcd(a,b)=gcd(b,r) = c，a=mc, b=nc 则 r = a-kb = (m-kn)c    \therefore r能被c整除，c为b与r的公因数。  下面用反证法证明m-kn与n互质：假设不互质，m-kn=xd, n=yd (d&amp;gt;1) 则 m=kn+xd=kyd+xd=(ky+x)d a">
+<meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CodeForces 938C Constructing Tests">
-<meta property="og:url" content="http://yoursite.com/2018/02/17/CodeForces-938C-Constructing-Tests/index.html">
+<meta property="og:title" content="辗转相除求GCD">
+<meta property="og:url" content="http://yoursite.com/2018/04/19/辗转相除求GCD/index.html">
 <meta property="og:site_name" content="SE">
-<meta property="og:description" content="http://codeforces.com/contest/938/problem/C 题意在一个n\times n的01矩阵中，要求每个m\times m 矩阵都至少要含一个0，求最大的1的数量。 现给定1的数量x，构造出n, m满足要求。 思路通过画图可以得到方程 x = n^2 - floor^2(n/m) ，给出x求n和m 接下来省略floor，化简得到 x = (n+n/m)(n-n/m">
+<meta property="og:description" content="定理若a \div b = k...r，则gcd(a,b)=gcd(b,r)。 证明设 gcd(a,b)=gcd(b,r) = c，a=mc, b=nc 则 r = a-kb = (m-kn)c    \therefore r能被c整除，c为b与r的公因数。  下面用反证法证明m-kn与n互质：假设不互质，m-kn=xd, n=yd (d&amp;gt;1) 则 m=kn+xd=kyd+xd=(ky+x)d a">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-17T15:15:17.485Z">
+<meta property="og:updated_time" content="2018-04-19T04:29:09.170Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeForces 938C Constructing Tests">
-<meta name="twitter:description" content="http://codeforces.com/contest/938/problem/C 题意在一个n\times n的01矩阵中，要求每个m\times m 矩阵都至少要含一个0，求最大的1的数量。 现给定1的数量x，构造出n, m满足要求。 思路通过画图可以得到方程 x = n^2 - floor^2(n/m) ，给出x求n和m 接下来省略floor，化简得到 x = (n+n/m)(n-n/m">
+<meta name="twitter:title" content="辗转相除求GCD">
+<meta name="twitter:description" content="定理若a \div b = k...r，则gcd(a,b)=gcd(b,r)。 证明设 gcd(a,b)=gcd(b,r) = c，a=mc, b=nc 则 r = a-kb = (m-kn)c    \therefore r能被c整除，c为b与r的公因数。  下面用反证法证明m-kn与n互质：假设不互质，m-kn=xd, n=yd (d&amp;gt;1) 则 m=kn+xd=kyd+xd=(ky+x)d a">
 
 
 
@@ -110,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/17/CodeForces-938C-Constructing-Tests/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/19/辗转相除求GCD/"/>
 
 
 
 
 
-  <title>CodeForces 938C Constructing Tests | SE</title>
+  <title>辗转相除求GCD | SE</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/17/CodeForces-938C-Constructing-Tests/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/辗转相除求GCD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SE">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CodeForces 938C Constructing Tests</h1>
+          <h1 class="post-title" itemprop="name headline">辗转相除求GCD</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-17T23:01:22+08:00">
-                2018-02-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-19T12:17:44+08:00">
+                2018-04-19
               </time>
             
 
@@ -280,9 +280,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/17/CodeForces-938C-Constructing-Tests/#comments" itemprop="discussionUrl">
+                <a href="/2018/04/19/辗转相除求GCD/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/02/17/CodeForces-938C-Constructing-Tests/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/04/19/辗转相除求GCD/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -310,17 +310,17 @@
       
 
       
-        <p><a href="http://codeforces.com/contest/938/problem/C" target="_blank" rel="external">http://codeforces.com/contest/938/problem/C</a></p>
-<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>在一个<script type="math/tex">n\times n</script>的01矩阵中，要求每个<script type="math/tex">m\times m</script> 矩阵都至少要含一个0，求最大的1的数量。</p>
-<p>现给定1的数量x，构造出n, m满足要求。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>通过画图可以得到方程 <script type="math/tex">x = n^2 - floor^2(n/m)</script> ，给出x求n和m</p>
-<p>接下来省略floor，化简得到 <script type="math/tex">x = (n+n/m)(n-n/m)</script></p>
-<p>令 <script type="math/tex">a=n+n/m, b=n-n/m</script> ，可以枚举b(1~根号x)，计算出a，从而得到n和m，需要在计算过程中判断是否合法。</p>
+        <h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p>若<script type="math/tex">a \div b = k...r</script>，则<script type="math/tex">gcd(a,b)=gcd(b,r)</script>。</p>
+<h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><p>设 <script type="math/tex">gcd(a,b)=gcd(b,r) = c</script>，<script type="math/tex">a=mc, b=nc</script></p>
+<p>则 <script type="math/tex">r = a-kb = (m-kn)c</script>    <script type="math/tex">\therefore r能被c整除，c为b与r的公因数。</script></p>
 <hr>
-<p>比赛的时候卡在了这道题，原因是推错了公式，今后要吸取教训，不能总想着敲代码，要先保证思路是对的。</p>
-<p>另外我发现自己对于这种数学公式推导的题目很头疼，要多加练习。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">x = n^2-(n/m)^2 = (n+n/m)(n-n/m)</span></div><div class="line"><span class="comment">					 a      b</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> t, x;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</div><div class="line">	<span class="keyword">while</span>(t--)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</div><div class="line">		<span class="keyword">int</span> m, n, a, b;</div><div class="line">		<span class="keyword">bool</span> flag = <span class="literal">false</span>;</div><div class="line">		<span class="keyword">if</span>(x == <span class="number">0</span>)&#123;</div><div class="line">			<span class="built_in">puts</span>(<span class="string">"1 1"</span>);</div><div class="line">			<span class="keyword">continue</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span>(b=<span class="number">1</span>; b*b&lt;<span class="number">1000000000</span>; b++)&#123;</div><div class="line">			<span class="keyword">if</span>(x%b==<span class="number">0</span>)&#123;</div><div class="line">				a = x / b;</div><div class="line">				<span class="keyword">if</span>(a&gt;b &amp;&amp; (a+b)%<span class="number">2</span>==<span class="number">0</span>)&#123;</div><div class="line">					n = (a+b)/<span class="number">2</span>;</div><div class="line">					m = n/(n-b);</div><div class="line">					<span class="keyword">if</span>(n/m != (a-b)/<span class="number">2</span>) <span class="keyword">continue</span>;</div><div class="line">					flag = <span class="literal">true</span>;</div><div class="line">					<span class="comment">// printf("a:%d, b:%d\n", a, b);</span></div><div class="line">					<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, n, m);</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(!flag) <span class="built_in">puts</span>(<span class="string">"-1"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><script type="math/tex; mode=display">O(\sqrt{n}) = O(\sqrt{1e9})</script>
+<script type="math/tex; mode=display">下面用反证法证明m-kn与n互质：</script><p>假设不互质，<script type="math/tex">m-kn=xd, n=yd (d>1)</script></p>
+<p>则 <script type="math/tex">m=kn+xd=kyd+xd=(ky+x)d</script></p>
+<script type="math/tex; mode=display">a=mc=(ky+x)cd, b=nc=ycd$$，a与b最大公因数为cd>c，矛盾。
+
+---
+
+因此$$gcd(a,b)=c=gcd(b,r)。</script><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//辗转相除</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">    <span class="keyword">while</span>(b != <span class="number">0</span>)&#123;</div><div class="line">        <span class="keyword">int</span> r = b;</div><div class="line">        b = a % b;</div><div class="line">        a = r;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -337,7 +337,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/题解/" rel="tag"># 题解</a>
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           
         </div>
       
@@ -350,8 +350,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/15/Educational-Codeforces-Round-37-D-Tanks/" rel="next" title="Educational Codeforces Round 37 D Tanks">
-                <i class="fa fa-chevron-left"></i> Educational Codeforces Round 37 D Tanks
+              <a href="/2018/04/10/POJ-1182-并查集/" rel="next" title="POJ 1182 并查集">
+                <i class="fa fa-chevron-left"></i> POJ 1182 并查集
               </a>
             
           </div>
@@ -359,10 +359,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/19/CodeForces-938D-Buy-a-Ticket/" rel="prev" title="CodeForces 938D Buy a Ticket">
-                CodeForces 938D Buy a Ticket <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,7 +503,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度分析"><span class="nav-number">4.</span> <span class="nav-text">复杂度分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-number">1.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明"><span class="nav-number">2.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -653,9 +649,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/02/17/CodeForces-938C-Constructing-Tests/';
-          this.page.identifier = '2018/02/17/CodeForces-938C-Constructing-Tests/';
-          this.page.title = 'CodeForces 938C Constructing Tests';
+          this.page.url = 'http://yoursite.com/2018/04/19/辗转相除求GCD/';
+          this.page.identifier = '2018/04/19/辗转相除求GCD/';
+          this.page.title = '辗转相除求GCD';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Becomebright.disqus.com/embed.js';
