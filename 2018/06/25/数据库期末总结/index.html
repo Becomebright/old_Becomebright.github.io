@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="终于考完数据库了，复习了一个星期，感觉自己根据ppt和书写的这份总结还不错，所以就发上来吧这更多的是一份提纲，只是知识点的结构，而不涉及具体的内容。 数据库期末复习共21个PPT，1090页  01 Introduction数据管理三个阶段：人工管理、文件系统、数据库系统 层次模型是数据库系统中最早出现的数据模型 (P19)数据模型：格式化模型(层次、网状)、关系模型、面向对象数据模型、对象关系数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库期末总结">
+<meta property="og:url" content="http://yoursite.com/2018/06/25/数据库期末总结/index.html">
+<meta property="og:site_name" content="SE">
+<meta property="og:description" content="终于考完数据库了，复习了一个星期，感觉自己根据ppt和书写的这份总结还不错，所以就发上来吧这更多的是一份提纲，只是知识点的结构，而不涉及具体的内容。 数据库期末复习共21个PPT，1090页  01 Introduction数据管理三个阶段：人工管理、文件系统、数据库系统 层次模型是数据库系统中最早出现的数据模型 (P19)数据模型：格式化模型(层次、网状)、关系模型、面向对象数据模型、对象关系数">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-25T11:08:34.421Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据库期末总结">
+<meta name="twitter:description" content="终于考完数据库了，复习了一个星期，感觉自己根据ppt和书写的这份总结还不错，所以就发上来吧这更多的是一份提纲，只是知识点的结构，而不涉及具体的内容。 数据库期末复习共21个PPT，1090页  01 Introduction数据管理三个阶段：人工管理、文件系统、数据库系统 层次模型是数据库系统中最早出现的数据模型 (P19)数据模型：格式化模型(层次、网状)、关系模型、面向对象数据模型、对象关系数">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/25/数据库期末总结/"/>
+
+
+
+
+
+  <title>数据库期末总结 | SE</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-108371787-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I Can Do All Things!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/数据库期末总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SE">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据库期末总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-25T19:07:15+08:00">
+                2018-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/25/数据库期末总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/06/25/数据库期末总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>终于考完数据库了，复习了一个星期，感觉自己根据ppt和书写的这份总结还不错，所以就发上来吧<br>这更多的是一份提纲，只是知识点的结构，而不涉及具体的内容。</p>
+<p>数据库期末复习<br>共21个PPT，1090页</p>
+<hr>
+<h3 id="01-Introduction"><a href="#01-Introduction" class="headerlink" title="01 Introduction"></a>01 Introduction</h3><p>数据管理三个阶段：人工管理、文件系统、数据库系统</p>
+<p>层次模型是数据库系统中最早出现的数据模型 (P19)<br>数据模型：格式化模型(层次、网状)、关系模型、面向对象数据模型、对象关系数据模型、半结构化数据模型</p>
+<p>数据库系统的特点：  </p>
+<ol>
+<li>数据结构化。 是数据库系统与文件系统的本质区别</li>
+<li>数据共享性高、冗余度低且易扩展</li>
+<li>数据独立性高：物理独立性、逻辑独立性</li>
+<li>数据由数据库管理系统统一管理和控制</li>
+</ol>
+<h3 id="03-ER-model-cont"><a href="#03-ER-model-cont" class="headerlink" title="03 ER model cont."></a>03 ER model cont.</h3><p>Keys constraints<br>Single-value constraints<br>Referential integrity constraints<br>Domain constraints<br>General constraints  </p>
+<p>super key<br>candidate key<br>primary key</p>
+<p>weak entity set: no primary key</p>
+<p>使用实体集：有至少一个非键属性 或 是一对多关系中“多”的那端</p>
+<h3 id="04-Relational-Model"><a href="#04-Relational-Model" class="headerlink" title="04 Relational Model"></a>04 Relational Model</h3><p>适合在计算机上实现<br>only a single concept: Relation</p>
+<p>Domain: attribute types<br>Schema: </p>
+<ul>
+<li>Relation Schema: Relation name + attribute names</li>
+<li>Database Schema: set of relation schemas<br>Instance</li>
+</ul>
+<p>Weak Entity Sets</p>
+<ul>
+<li>identifying relationship, 不能有属性</li>
+<li>discriminator(partial key)</li>
+</ul>
+<p>Cartesian product<br>Relation is the subset of Cartesian product</p>
+<p>Cardinality(基数): max number of tuples</p>
+<p>一个关系表中，属性名不能相同</p>
+<h3 id="05-Relational-Model-cont"><a href="#05-Relational-Model-cont" class="headerlink" title="05 Relational Model cont."></a>05 Relational Model cont.</h3><p>多对一时，关系可合并到多这一端<br>一对一时，关系可合并到任意一端</p>
+<p>对于弱实体集，要保存构成键的属性（有些来自其它强实体集），不需要关系表</p>
+<p>Integrity Constrainsts:</p>
+<ul>
+<li>Domain Integrity Constrainsts</li>
+<li>Entity Integrity Constrainsts<ul>
+<li>primary key, cannot be null</li>
+<li>unique key, can have multiple null unique keys <strong>以ppt为准</strong>  ??0(book) or 1(sqlserver) or 0+(ppt-sql cont.)</li>
+</ul>
+</li>
+<li>Referential Integrity Constrainsts<ul>
+<li>foreign key, can be null, 外键可以同时是主键</li>
+</ul>
+</li>
+</ul>
+<h3 id="06-Relational-Algebra"><a href="#06-Relational-Algebra" class="headerlink" title="06 Relational Algebra"></a>06 Relational Algebra</h3><p>基本的运算有5个：并、差、笛卡儿积、选择、投影<br>由他们得到的运算有3个：交、连接、除</p>
+<p>Union ∪</p>
+<p>Difference -</p>
+<p>Selection $\sigma_c(R)$, 选择特定的行</p>
+<p>Projection $\pi_{…}(R)$, 选择特定的列, 不去重(实际应该去重，但这里以PPT为准)</p>
+<p>Cartesian Product $\times$</p>
+<p>Intersection $R1 ∩ R2 = R1 - (R1 - R2)$</p>
+<p>Join</p>
+<ul>
+<li>Theta join $R1 \Join_{\theta} R2 = \sigma_{\theta}(R1 \times R2)$</li>
+<li>Natural join $R \Join S$:<ul>
+<li>$R \times S$</li>
+<li>Select all the tuples where $R[A_i]=S[B_j]$ ($A_i和B_j是相同的属性$)</li>
+<li>Eliminate the duplicate attributes</li>
+</ul>
+</li>
+<li>Equi-join $R1 \Join_{A=B} R2$</li>
+<li>Outer join: 删去重复属性<ul>
+<li>left outer join: 左侧必须有，右侧可为null</li>
+<li>right outer join:右侧必须有，左侧可为null</li>
+<li>full outer join</li>
+</ul>
+</li>
+</ul>
+<p>除 $R \div S$，R中至少包含S的tuple(且除去S中的属性)，是非传统的集合运算</p>
+<h3 id="07-SQL"><a href="#07-SQL" class="headerlink" title="07 SQL"></a>07 SQL</h3><p>SQL的特点：综合统一、高度非过程化、面向集合的操作方式、自含+嵌入两种使用方式、易学易用</p>
+<p>DDL: Data Definition Language<br>Query Language<br>DML: Data Manipulation Language<br>DCL: Data Control Language</p>
+<p>Query:</p>
+<ul>
+<li>select<ul>
+<li>*</li>
+<li>as</li>
+<li>distinct / all</li>
+<li>aggregations: sum,avg,count,min,max,…</li>
+</ul>
+</li>
+<li>from<ul>
+<li>rename: <code>from Beers (as) b1</code></li>
+<li>join<ul>
+<li><code>R natural join S</code>, not supported in SQLServer</li>
+<li><code>R cross join S</code></li>
+<li>Theta join: <code>R join S on &lt;condition&gt;</code></li>
+<li>inner join: <code>R inner join S on &lt;condition&gt;</code></li>
+<li>outer join: <code>R [left/right/full] outer join S on &lt;condition&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>where<ul>
+<li>(not) between .. and ..</li>
+<li>(not) in ..</li>
+<li>(not) like ..<ul>
+<li>% = any string</li>
+<li>_ = any character</li>
+<li>escape</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>group by</li>
+<li>having</li>
+<li>order by … asc/desc</li>
+</ul>
+<p>任何值与null的比较结果都是UNKNOWN<br>is (not) null</p>
+<p>tuple variable</p>
+<p>Subquery</p>
+<ul>
+<li>不能使用<code>order by</code></li>
+<li><code>(not) exists</code></li>
+</ul>
+<p>全称量词：$(\forall x)P \equiv \neg(\exists x(\neg P))$<br>逻辑蕴含：$P \to Q \equiv \neg P \vee Q$</p>
+<p><code>any</code>, <code>all</code></p>
+<p><code>union</code>, <code>intersect</code>, <code>except</code><br>e.g. <code>(subquery) union (subquery)</code></p>
+<h3 id="08-SQL-cont"><a href="#08-SQL-cont" class="headerlink" title="08 SQL cont."></a>08 SQL cont.</h3><p>Data Definition Language  </p>
+<ul>
+<li><code>create table xxx (&lt;list of attrs&gt;);</code><ul>
+<li><code>primary key</code></li>
+<li><code>unique</code></li>
+<li><code>not null</code></li>
+<li><code>default ...</code></li>
+</ul>
+</li>
+<li><code>drop table xxx;</code></li>
+<li><code>alter table xxx add &lt;attr declaration&gt;</code> <code>alter table xxx drop &lt;attr&gt;</code></li>
+</ul>
+<p>Data Manipulation Language</p>
+<ul>
+<li>Insert: <ul>
+<li><code>insert into &lt;table&gt; values(&lt;list of values&gt;)</code></li>
+<li><code>insert into &lt;table&gt; (subquery)</code></li>
+</ul>
+</li>
+<li>Delete: 先标记，后删除<ul>
+<li><code>delete from &lt;table&gt; where &lt;condition&gt;</code></li>
+<li><code>delete from &lt;table&gt;</code> 清空该表</li>
+</ul>
+</li>
+<li>Update:<ul>
+<li><code>update &lt;table&gt; set ... where &lt;condition&gt;</code><br>  e.g. <code>update Drinkers set phone=&#39;123&#39; where name=&#39;Fred&#39;</code></li>
+</ul>
+</li>
+</ul>
+<p>Views</p>
+<ul>
+<li><code>create view &lt;name&gt; as &lt;query&gt;</code></li>
+<li>not physically stored</li>
+<li><code>with check option</code> 在修改视图时，满足<query>中的条件表达式</query></li>
+</ul>
+<p>Indexer</p>
+<ul>
+<li><code>create [unique][cluster] index &lt;name&gt; on &lt;table&gt; (列名 顺序, ...)</code></li>
+<li><code>asc</code>, <code>desc</code></li>
+<li><code>unique</code> 索引值唯一</li>
+<li><code>cluster</code> 聚簇索引，修改表的物理存储顺序</li>
+<li>索引的优点：加速数据库查询</li>
+<li>索引的缺点:占用存储空间、索引的维护增加数据库的负担</li>
+</ul>
+<h3 id="09-Constrainsts"><a href="#09-Constrainsts" class="headerlink" title="09 Constrainsts"></a>09 Constrainsts</h3><p>数据库的完整性是指数据的正确性和相容性。</p>
+<p>约束的分类： <a>https://www.ppkao.com/tiku/daan/744331/260FE7D8072B6B354CFE684B13A42BBA</a></p>
+<p><code>check</code>:</p>
+<ul>
+<li>attribute-based check<ul>
+<li>e.g. <code>create table depositor(balance int, check(balance&gt;=0),...)</code></li>
+<li>只在约束的值发生变化(insert/update)时进行检查</li>
+</ul>
+</li>
+<li>tuple-based check</li>
+</ul>
+<p>Foreign Keys: <code>foreign key(...)</code>, <code>references&lt;table&gt;(...)</code></p>
+<ul>
+<li>referenced attributes must be primary key or unique</li>
+<li>发生冲突时：<code>on delete/update ...</code><ul>
+<li>Default: Reject modification</li>
+<li><code>Cascade</code>: 对主键表的改动将影响外键表</li>
+<li><code>Set null</code></li>
+</ul>
+</li>
+</ul>
+<p>Assertions: <code>create assertion &lt;name&gt; check(condition)</code>  </p>
+<p>Triggers 触发器:</p>
+<ul>
+<li>ECA rule: Event, Condition, Action</li>
+<li><code>before</code>, <code>after/for</code>, <code>instead of</code></li>
+<li>row-level / statement-level<ul>
+<li><code>for each row</code>: execute once for each modified tuple</li>
+<li><code>for each statement</code>(default): execute once for a SQL statement</li>
+</ul>
+</li>
+<li><code>inserted</code>, <code>deleted</code></li>
+<li><code>raiserror</code>, <code>rollback transaction</code></li>
+</ul>
+<h3 id="09-存储过程和触发器"><a href="#09-存储过程和触发器" class="headerlink" title="09 存储过程和触发器"></a>09 存储过程和触发器</h3><h4 id="Transact-SQL"><a href="#Transact-SQL" class="headerlink" title="Transact-SQL"></a>Transact-SQL</h4><ul>
+<li>局部变量<ul>
+<li>声明： <code>declare @变量名 变量类型, ...</code></li>
+<li>赋值<ul>
+<li><code>select @变量名=值</code>(可一次给多个变量赋值)</li>
+<li><code>set @变量名=值</code>(一次只能给一个变量赋值)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>全局变量<ul>
+<li>引用时以<code>@@</code>开头</li>
+<li>不能和局部变量重名</li>
+</ul>
+</li>
+<li>注释<ul>
+<li><code>--</code></li>
+<li><code>/* */</code></li>
+</ul>
+</li>
+<li>函数</li>
+</ul>
+<h4 id="游标编程"><a href="#游标编程" class="headerlink" title="游标编程"></a>游标编程</h4><p>declare—&gt;open—&gt;fetch—&gt;close—&gt;deallocate<br>@@fetch_status</p>
+<h4 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h4><ul>
+<li>创建<ul>
+<li><code>create procudure &lt;名字&gt; (@参数名 参数类型, ...) as &lt;执行过程&gt;</code></li>
+<li>默认参数</li>
+<li>返回参数<code>output</code></li>
+</ul>
+</li>
+<li>执行<ul>
+<li><code>execute &lt;名字&gt; 参数1,...</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="09-Transactions"><a href="#09-Transactions" class="headerlink" title="09 Transactions"></a>09 Transactions</h3><h4 id="ACID"><a href="#ACID" class="headerlink" title="ACID:"></a>ACID:</h4><ul>
+<li><strong>Atomicity</strong>: 一个transaction要么执行完毕，要么不执行</li>
+<li><strong>Consistency</strong>: 满足约束</li>
+<li><strong>Isolation</strong>: 并发控制</li>
+<li><strong>Durability</strong>: 数据持久保存 </li>
+</ul>
+<p>shadow database</p>
+<ul>
+<li>效率低、不能处理并发</li>
+<li>db_pointer</li>
+</ul>
+<p>丢失修改、不可重复读、读”脏”数据</p>
+<h4 id="Concurrency-control-schemes"><a href="#Concurrency-control-schemes" class="headerlink" title="Concurrency control schemes"></a>Concurrency control schemes</h4><ul>
+<li><strong>Schedule</strong>: 将并发事务中的命令排序</li>
+<li><strong>Serializability</strong>: 并发事务等价于serial shedule<ul>
+<li>只考虑read和write</li>
+<li><strong>conflict</strong>: 不同事务的两条指令使用了同一个数据，且它们中至少有一个write，则二者的顺序不可调换</li>
+<li><strong>conflict equivalent</strong>: non-conflicting指令顺序不同</li>
+<li><strong>conflict serializable</strong>: schdule S和一个serial schedule conflict equivalent<ul>
+<li><strong>Precedence graph</strong>: 若图没有循环，则conflict serializable，用拓扑排序即可</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Recoveralble schedule</strong>: 一个事务先写，另一个事务后读，则先写的事务必须先commit</li>
+<li><strong>Cascading rollback</strong>: 一个事务的回滚导致其它事务也回滚</li>
+<li><strong>Cascadeless schdule</strong>: 不会发生级联回滚，是recoverable的</li>
+</ul>
+<h4 id="Concurrency-control-algorithms"><a href="#Concurrency-control-algorithms" class="headerlink" title="Concurrency control algorithms"></a>Concurrency control algorithms</h4><ul>
+<li><strong>Locking</strong><ul>
+<li>Only serializable, recoverable schedules are allowed.</li>
+<li><strong>lock protocol</strong>, <strong>lock manager</strong></li>
+<li><strong>Binary lock</strong><ul>
+<li>Locked, Unlocked</li>
+<li>too restrict</li>
+</ul>
+</li>
+<li><strong>3 locks</strong><ul>
+<li>Unlocked</li>
+<li>Shared(Read)</li>
+<li>Exclusive(Write)</li>
+</ul>
+</li>
+<li><strong>Two-phase locking(2PL)</strong>: 解锁后不能再加锁<ul>
+<li>lock point: . the point where a transaction acquired its final lock</li>
+</ul>
+</li>
+<li><strong>Strict 2PL</strong>: 只在事务结束时释放锁，避免级联回滚</li>
+<li><strong>Dead lock</strong><ul>
+<li>Prevention: Wait-die / Wound-wait</li>
+<li>detection: waits-for-graph</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Time-Stamping</strong></li>
+<li><strong>Optimistic</strong></li>
+</ul>
+<h3 id="10-规范化理论"><a href="#10-规范化理论" class="headerlink" title="10 规范化理论"></a>10 规范化理论</h3><p><strong>规范化</strong>：对原关系进行投影</p>
+<h4 id="函数依赖"><a href="#函数依赖" class="headerlink" title="函数依赖"></a>函数依赖</h4><p>→，是一种语义完整性约束</p>
+<ul>
+<li>平凡函数依赖：X→Y, Y是X的子集</li>
+<li>非平凡函数依赖</li>
+<li>投影性、扩张性、合并性、分解性</li>
+<li>完全函数依赖(f)、部分函数依赖(p)</li>
+<li>传递函数依赖(t)、直接函数依赖</li>
+</ul>
+<h4 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h4><p>一事一表</p>
+<p><strong>第一范式(1NF)</strong></p>
+<ul>
+<li>所有属性均为简单属性</li>
+<li>满足该条件的关系称为<strong>规范化关系</strong></li>
+<li>既存在完全函数依赖、又存在部分函数依赖和传递函数依赖</li>
+</ul>
+<p><strong>第二范式(2NF)</strong></p>
+<ul>
+<li>每个非主属性都完全函数依赖于R中的每个关系键</li>
+<li>消除非主属性对键的部分函数依赖</li>
+<li>存在非主属性对主键的传递依赖</li>
+</ul>
+<p><strong>第三范式(3NF)</strong></p>
+<ul>
+<li>是2NF，且每个非主属性都不传递依赖于R中的每个关系键</li>
+<li>消除非主属性对键的传递函数依赖</li>
+<li>没有限制主属性对键的依赖关系</li>
+</ul>
+<p><strong>BC范式(BCNF)</strong></p>
+<ul>
+<li>是1NF，且所有函数依赖$X→Y(Y\notin X)$，决定因素X都包含了R的一个候选键</li>
+<li>消除主属性对键的部分函数依赖和传递函数依赖</li>
+<li>$BCNF \Rightarrow 3NF$</li>
+</ul>
+<p><strong>无损连接性</strong>：拆开能连回来，保证不丢失信息<br><strong>函数依赖保持性</strong>：不丢失函数依赖，减少异常情况<br>满足这两个性质，可以达到3NF</p>
+<h4 id="非规范化设计"><a href="#非规范化设计" class="headerlink" title="非规范化设计"></a>非规范化设计</h4><p>提高数据库运行效率<br>增加数据冗余、影响数据库的完整性、降低数据更新速度、增加物理空间占用</p>
+<ul>
+<li>增加冗余列：在多个表中具有相同的列</li>
+<li>增加派生列：增加的列是计算生成的</li>
+<li>重新组表：合并表</li>
+<li>表分割<ul>
+<li>水平分割</li>
+<li>垂直分割</li>
+</ul>
+</li>
+</ul>
+<h3 id="13-recovery"><a href="#13-recovery" class="headerlink" title="13 recovery"></a>13 recovery</h3><p>基本原理：冗余</p>
+<ul>
+<li>Undo-Logging<ul>
+<li><code>T, X, v</code>: 事务T修改X，旧值为v</li>
+<li><code>T, X, v</code>在修改之前，<code>Commit T</code>在所有修改之后</li>
+<li>Undo时从后向前读，只undo未commit或abort的</li>
+<li>undo是幂等的，即可以重复执行</li>
+</ul>
+</li>
+<li>Checkpoint<ul>
+<li>定期加入，等待当前事务结束后加上<code>&lt;CKPT&gt;</code></li>
+</ul>
+</li>
+<li>Redo-Logging<ul>
+<li><code>T, X, v</code>: 事务T修改X，新值为v</li>
+<li><code>T, X, v</code>在修改之前，<code>Commit T</code>在所有写之前</li>
+<li>Redo时从前向后读，只redo commit过的</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-数据库设计"><a href="#11-数据库设计" class="headerlink" title="11 数据库设计"></a>11 数据库设计</h3><ul>
+<li>结构设计（静态模型设计）：概念设计、逻辑设计、物理设计</li>
+<li>行为设计（动态模型设计）</li>
+</ul>
+<p>设计过程：需求分析、概念结构设计、逻辑结构设计、物理数据库设计、实施、运行维护</p>
+<h4 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h4><ul>
+<li>信息要求、处理要求、安全性与完整性要求</li>
+<li>自顶向下的结构化分析方法(SA) / 面向对象的分析方法</li>
+<li>数据流图</li>
+<li>数据字典：数据项、数据流、数据存储、处理过程、数据结构</li>
+</ul>
+<h4 id="概念结构设计"><a href="#概念结构设计" class="headerlink" title="概念结构设计"></a>概念结构设计</h4><p>数据抽象</p>
+<ul>
+<li>分类：定义类型</li>
+<li>聚集：定义类型的组成成分</li>
+<li>概括：定义类型间的子集关系(继承)</li>
+</ul>
+<p>局部视图设计<br>两个准则：</p>
+<ul>
+<li>属性不可分</li>
+<li>属性不能与其它实体有联系</li>
+</ul>
+<p>视图的集成：</p>
+<ul>
+<li>合并（消除冲突）<ul>
+<li>属性冲突：属性的域/取值单位冲突</li>
+<li>命名冲突</li>
+<li>结构冲突</li>
+<li>得到初步ER图</li>
+</ul>
+</li>
+<li>修改与重构（消除冗余）<ul>
+<li>冗余数据、冗余联系</li>
+<li>得到基本ER图</li>
+<li>利用分析方法（数据字典、数据流图）、规范化理论</li>
+</ul>
+</li>
+</ul>
+<p>验证整体概念结构</p>
+<h4 id="逻辑结构设计"><a href="#逻辑结构设计" class="headerlink" title="逻辑结构设计"></a>逻辑结构设计</h4><p>E-R图—&gt;关系模型（层次、网状、关系…）  </p>
+<ul>
+<li>多对多联系要转换成一个关系模式</li>
+<li>一对一、一对多可以转换成关系模式，也可以合并</li>
+<li>多元联系转换为一个关系模式</li>
+<li>有相同键的关系模式可合并</li>
+</ul>
+<p>关系模型—&gt;特定DBMS支持下的数据模型  </p>
+<p>优化模型</p>
+<ul>
+<li>基于规范化理论<ul>
+<li>极小化实体<strong>间</strong>的数据依赖</li>
+<li>分析关系模式<strong>内</strong>的函数依赖</li>
+</ul>
+</li>
+<li>根据需求优化<ul>
+<li>分解：水平分解、垂直分解</li>
+</ul>
+</li>
+</ul>
+<p>设计用户子模式</p>
+<h3 id="先进数据库技术"><a href="#先进数据库技术" class="headerlink" title="先进数据库技术"></a>先进数据库技术</h3><p>对象持久化：</p>
+<ul>
+<li>阻抗失配</li>
+<li>OR映射</li>
+</ul>
+<p>OODB: 面向对象数据模型 </p>
+<p>ORDB: 对象-关系数据模型</p>
+<ul>
+<li>允许非原子属性</li>
+<li>面向对象</li>
+<li>存储大对象(图像、视频)</li>
+</ul>
+<h4 id="NoSql"><a href="#NoSql" class="headerlink" title="NoSql"></a>NoSql</h4><p>relational db are not designed to run on clusters.</p>
+<p>特点:</p>
+<ul>
+<li>don’t use SQL</li>
+<li>open-source</li>
+<li>most run on clusters</li>
+<li>CAP</li>
+<li>schema free</li>
+</ul>
+<p>Aggregate Model</p>
+<ul>
+<li>Key-value, Document, Column-family<ul>
+<li>Key-value: aggregate不透明, 用key查询</li>
+<li>Document: 可以看到aggregate结构, 用query语句查询</li>
+<li>Column-family<ul>
+<li>e.g. Google’s BigTable</li>
+<li>把表按列分成不同组(families)，分组存储</li>
+<li>two-level aggregate structure</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>more complex structure than tuples<ul>
+<li>list, map, …</li>
+</ul>
+</li>
+<li>distributable storage (cluster distribution)</li>
+<li>have problem on querying historical data —&gt; aggregate ignorant</li>
+<li>在多个aggregates上操作的事务不要求原子性</li>
+</ul>
+<p>scale up(升级设备) / scale out(分布式存储)<br>replication(复制) / sharding(分区)<br>resilience(弹性)  </p>
+<p>master-slave replication</p>
+<ul>
+<li>good read resilience</li>
+<li>bad write resilience</li>
+<li>master node分配更新(写操作)</li>
+<li>inconsistency</li>
+</ul>
+<p>peer-to-peer replication</p>
+<ul>
+<li>all nodes equal</li>
+<li>easily add nodes</li>
+<li>consistency</li>
+</ul>
+<p>CAP Theorem</p>
+<ul>
+<li>Consistency, Availability, Partition-tolerance只能三选二<ul>
+<li>Consistency: 所有结点拿到的数据是相同的</li>
+<li>Availability: 允许结点错误</li>
+<li>Partition-tolerance: 允许系统内交流时的信息丢失</li>
+</ul>
+</li>
+</ul>
+<p>NRW Theory</p>
+<ul>
+<li>R: # of servers to read from</li>
+<li>W: # of servers to get response from</li>
+<li>N: replication factor</li>
+<li>strong write consistency: W &gt; N / 2</li>
+<li>strong read consistency : R + W &gt; N</li>
+</ul>
+<p>BASE model</p>
+<ul>
+<li>eventual consistency (weak), availability first<ul>
+<li>fault tolerant</li>
+</ul>
+</li>
+<li>Basically Available: always available</li>
+<li>Soft state: 系统状态一直变化</li>
+<li>Eventual consistency<ul>
+<li>ACID要求操作后立即consistency</li>
+<li>BASE要求最终达到consistency</li>
+</ul>
+</li>
+<li>NoSql usually use it</li>
+</ul>
+<h4 id="Dynamo"><a href="#Dynamo" class="headerlink" title="Dynamo"></a>Dynamo</h4><p>说实话，没怎么看懂，也没时间去搞懂了</p>
+<ul>
+<li>key-value</li>
+<li>去中心化, 高可扩展性, 对称性</li>
+<li>good availability, low consistency</li>
+<li>consistent hash<ul>
+<li>ring, virtual node</li>
+</ul>
+</li>
+<li>version clock: 似乎类似于git的版本控制</li>
+<li>decentralized replica synchronization protocol</li>
+<li>gossip protocol</li>
+<li>sloppy quorum</li>
+<li>anti-entropy protocol, Merkle tree</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/20/说说这两周的事/" rel="next" title="说说这两周的事">
+                <i class="fa fa-chevron-left"></i> 说说这两周的事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <p class="site-author-name" itemprop="name">SE</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Becomebright" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="15652587063@163.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-163"></i>E-Mail</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#01-Introduction"><span class="nav-number">1.</span> <span class="nav-text">01 Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#03-ER-model-cont"><span class="nav-number">2.</span> <span class="nav-text">03 ER model cont.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#04-Relational-Model"><span class="nav-number">3.</span> <span class="nav-text">04 Relational Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#05-Relational-Model-cont"><span class="nav-number">4.</span> <span class="nav-text">05 Relational Model cont.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#06-Relational-Algebra"><span class="nav-number">5.</span> <span class="nav-text">06 Relational Algebra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#07-SQL"><span class="nav-number">6.</span> <span class="nav-text">07 SQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#08-SQL-cont"><span class="nav-number">7.</span> <span class="nav-text">08 SQL cont.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#09-Constrainsts"><span class="nav-number">8.</span> <span class="nav-text">09 Constrainsts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#09-存储过程和触发器"><span class="nav-number">9.</span> <span class="nav-text">09 存储过程和触发器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Transact-SQL"><span class="nav-number">9.1.</span> <span class="nav-text">Transact-SQL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#游标编程"><span class="nav-number">9.2.</span> <span class="nav-text">游标编程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#存储过程"><span class="nav-number">9.3.</span> <span class="nav-text">存储过程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#09-Transactions"><span class="nav-number">10.</span> <span class="nav-text">09 Transactions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ACID"><span class="nav-number">10.1.</span> <span class="nav-text">ACID:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Concurrency-control-schemes"><span class="nav-number">10.2.</span> <span class="nav-text">Concurrency control schemes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Concurrency-control-algorithms"><span class="nav-number">10.3.</span> <span class="nav-text">Concurrency control algorithms</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-规范化理论"><span class="nav-number">11.</span> <span class="nav-text">10 规范化理论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数依赖"><span class="nav-number">11.1.</span> <span class="nav-text">函数依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#范式"><span class="nav-number">11.2.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非规范化设计"><span class="nav-number">11.3.</span> <span class="nav-text">非规范化设计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-recovery"><span class="nav-number">12.</span> <span class="nav-text">13 recovery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-数据库设计"><span class="nav-number">13.</span> <span class="nav-text">11 数据库设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析"><span class="nav-number">13.1.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#概念结构设计"><span class="nav-number">13.2.</span> <span class="nav-text">概念结构设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑结构设计"><span class="nav-number">13.3.</span> <span class="nav-text">逻辑结构设计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先进数据库技术"><span class="nav-number">14.</span> <span class="nav-text">先进数据库技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NoSql"><span class="nav-number">14.1.</span> <span class="nav-text">NoSql</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamo"><span class="nav-number">14.2.</span> <span class="nav-text">Dynamo</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 &mdash; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SE</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://Becomebright.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/06/25/数据库期末总结/';
+          this.page.identifier = '2018/06/25/数据库期末总结/';
+          this.page.title = '数据库期末总结';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://Becomebright.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
