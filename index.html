@@ -310,14 +310,11 @@
       
         
           
-          numpy中数据格式有array和mat，乘法有普通乘号 * 和 dot ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。
-Dot : 遵循矩阵乘法* : It depends
-array 相乘：逐元素相乘
-mat相乘：矩阵乘法
-array与mat相乘：矩阵乘法
-
-
-          
+          Difference between *, dot() and multiply()
+元素逐项相乘：np.multiply(a, b)
+矩阵乘法：np.dot(a, b) or a.dot(b) or np.matmul(a, b)
+* 在 np.array 中重载为元素乘法，在 np.matrix
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/06/09/Numpy-矩阵乘法/#more" rel="contents">

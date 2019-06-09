@@ -69,18 +69,18 @@
 
 
 
-<meta name="description" content="numpy中数据格式有array和mat，乘法有普通乘号 * 和 dot ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。 Dot : 遵循矩阵乘法* : It depends array 相乘：逐元素相乘 mat相乘：矩阵乘法 array与mat相乘：矩阵乘法">
+<meta name="description" content="Difference between *, dot() and multiply() 元素逐项相乘：np.multiply(a, b) 矩阵乘法：np.dot(a, b) or a.dot(b) or np.matmul(a, b) * 在 np.array 中重载为元素乘法，在 np.matrix 中重载为矩阵乘法">
 <meta name="keywords" content="Deep Learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Numpy 矩阵乘法">
 <meta property="og:url" content="http://yoursite.com/2019/06/09/Numpy-矩阵乘法/index.html">
 <meta property="og:site_name" content="SE">
-<meta property="og:description" content="numpy中数据格式有array和mat，乘法有普通乘号 * 和 dot ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。 Dot : 遵循矩阵乘法* : It depends array 相乘：逐元素相乘 mat相乘：矩阵乘法 array与mat相乘：矩阵乘法">
+<meta property="og:description" content="Difference between *, dot() and multiply() 元素逐项相乘：np.multiply(a, b) 矩阵乘法：np.dot(a, b) or a.dot(b) or np.matmul(a, b) * 在 np.array 中重载为元素乘法，在 np.matrix 中重载为矩阵乘法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-09T17:53:29.398Z">
+<meta property="og:updated_time" content="2019-06-09T21:51:51.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Numpy 矩阵乘法">
-<meta name="twitter:description" content="numpy中数据格式有array和mat，乘法有普通乘号 * 和 dot ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。 Dot : 遵循矩阵乘法* : It depends array 相乘：逐元素相乘 mat相乘：矩阵乘法 array与mat相乘：矩阵乘法">
+<meta name="twitter:description" content="Difference between *, dot() and multiply() 元素逐项相乘：np.multiply(a, b) 矩阵乘法：np.dot(a, b) or a.dot(b) or np.matmul(a, b) * 在 np.array 中重载为元素乘法，在 np.matrix 中重载为矩阵乘法">
 
 
 
@@ -315,11 +315,10 @@
       
 
       
-        <p>numpy中数据格式有<strong>array</strong>和<strong>mat</strong>，乘法有普通乘号 <code>*</code> 和 <code>dot</code> ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。</p>
-<h3 id="Dot-遵循矩阵乘法"><a href="#Dot-遵循矩阵乘法" class="headerlink" title="Dot : 遵循矩阵乘法"></a><code>Dot</code> : 遵循矩阵乘法</h3><h3 id="It-depends"><a href="#It-depends" class="headerlink" title="* : It depends"></a><code>*</code> : It depends</h3><ul>
-<li>array 相乘：逐元素相乘</li>
-<li>mat相乘：矩阵乘法</li>
-<li>array与mat相乘：矩阵乘法</li>
+        <h3 id="Difference-between-dot-and-multiply"><a href="#Difference-between-dot-and-multiply" class="headerlink" title="Difference between *, dot() and multiply()"></a>Difference between <code>*</code>, <code>dot()</code> and <code>multiply()</code></h3><ul>
+<li>元素逐项相乘：<code>np.multiply(a, b)</code></li>
+<li>矩阵乘法：<code>np.dot(a, b)</code> or <code>a.dot(b)</code> or <code>np.matmul(a, b)</code></li>
+<li><code>*</code> 在 <code>np.array</code> 中重载为元素乘法，在 <code>np.matrix</code> 中重载为矩阵乘法</li>
 </ul>
 
       
@@ -504,7 +503,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dot-遵循矩阵乘法"><span class="nav-number">1.</span> <span class="nav-text">Dot : 遵循矩阵乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#It-depends"><span class="nav-number">2.</span> <span class="nav-text">* : It depends</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Difference-between-dot-and-multiply"><span class="nav-number">1.</span> <span class="nav-text">Difference between *, dot() and multiply()</span></a></li></ol></div>
             
 
           </div>
