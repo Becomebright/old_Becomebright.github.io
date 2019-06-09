@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="日记," />
+  <meta name="keywords" content="Deep Learning," />
 
 
 
@@ -69,18 +69,18 @@
 
 
 
-<meta name="description" content="如果已经知道了结果，你会不会去努力？ 一直以来，我是一个没有梦想的人，走在熙熙攘攘的人潮中，升学-工作-结婚，这就是摆在我面前的道路。 我是不甘心的，可千百次辗转反侧之后，我仍是找不到一个目标，一件能让我乐此不疲的事。 因为我想要的，太遥不可及了。 但是 就算我们所处的世界不同 为了接近她，我想再挣扎一番 我梦想着 和她一起去月球，离开太阳系，去比宇宙更远的地方 我想摆脱死亡的命运 想要洞察这个世">
-<meta name="keywords" content="日记">
+<meta name="description" content="numpy中数据格式有array和mat，乘法有普通乘号 * 和 dot ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。 Dot : 遵循矩阵乘法* : It depends array 相乘：逐元素相乘 mat相乘：矩阵乘法 array与mat相乘：矩阵乘法">
+<meta name="keywords" content="Deep Learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Desperate">
-<meta property="og:url" content="http://yoursite.com/2018/01/11/Desperate/index.html">
+<meta property="og:title" content="Numpy 矩阵乘法">
+<meta property="og:url" content="http://yoursite.com/2019/06/09/Numpy-矩阵乘法/index.html">
 <meta property="og:site_name" content="SE">
-<meta property="og:description" content="如果已经知道了结果，你会不会去努力？ 一直以来，我是一个没有梦想的人，走在熙熙攘攘的人潮中，升学-工作-结婚，这就是摆在我面前的道路。 我是不甘心的，可千百次辗转反侧之后，我仍是找不到一个目标，一件能让我乐此不疲的事。 因为我想要的，太遥不可及了。 但是 就算我们所处的世界不同 为了接近她，我想再挣扎一番 我梦想着 和她一起去月球，离开太阳系，去比宇宙更远的地方 我想摆脱死亡的命运 想要洞察这个世">
+<meta property="og:description" content="numpy中数据格式有array和mat，乘法有普通乘号 * 和 dot ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。 Dot : 遵循矩阵乘法* : It depends array 相乘：逐元素相乘 mat相乘：矩阵乘法 array与mat相乘：矩阵乘法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-11T09:23:55.076Z">
+<meta property="og:updated_time" content="2019-06-09T17:53:29.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Desperate">
-<meta name="twitter:description" content="如果已经知道了结果，你会不会去努力？ 一直以来，我是一个没有梦想的人，走在熙熙攘攘的人潮中，升学-工作-结婚，这就是摆在我面前的道路。 我是不甘心的，可千百次辗转反侧之后，我仍是找不到一个目标，一件能让我乐此不疲的事。 因为我想要的，太遥不可及了。 但是 就算我们所处的世界不同 为了接近她，我想再挣扎一番 我梦想着 和她一起去月球，离开太阳系，去比宇宙更远的地方 我想摆脱死亡的命运 想要洞察这个世">
+<meta name="twitter:title" content="Numpy 矩阵乘法">
+<meta name="twitter:description" content="numpy中数据格式有array和mat，乘法有普通乘号 * 和 dot ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。 Dot : 遵循矩阵乘法* : It depends array 相乘：逐元素相乘 mat相乘：矩阵乘法 array与mat相乘：矩阵乘法">
 
 
 
@@ -110,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/11/Desperate/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/06/09/Numpy-矩阵乘法/"/>
 
 
 
 
 
-  <title>Desperate | SE</title>
+  <title>Numpy 矩阵乘法 | SE</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/Desperate/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/09/Numpy-矩阵乘法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SE">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Desperate</h1>
+          <h1 class="post-title" itemprop="name headline">Numpy 矩阵乘法</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-11T10:11:36+01:00">
-                2018-01-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-09T13:47:42+02:00">
+                2019-06-09
               </time>
             
 
@@ -280,9 +280,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/11/Desperate/#comments" itemprop="discussionUrl">
+                <a href="/2019/06/09/Numpy-矩阵乘法/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/11/Desperate/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2019/06/09/Numpy-矩阵乘法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -315,23 +315,12 @@
       
 
       
-        <p>如果已经知道了结果，你会不会去努力？</p>
-<p>一直以来，我是一个没有梦想的人，走在熙熙攘攘的人潮中，升学-工作-结婚，这就是摆在我面前的道路。</p>
-<p>我是不甘心的，可千百次辗转反侧之后，我仍是找不到一个目标，一件能让我乐此不疲的事。</p>
-<p>因为我想要的，太遥不可及了。</p>
-<p>但是</p>
-<p>就算我们所处的世界不同</p>
-<p>为了接近她，我想再挣扎一番</p>
-<p>我梦想着</p>
-<p>和她一起去月球，离开太阳系，去比宇宙更远的地方</p>
-<p>我想摆脱死亡的命运</p>
-<p>想要洞察这个世界的秘密</p>
-<p>可这些话</p>
-<p>我从来都没有说出口过</p>
-<p>因为二十岁的我，和十岁的我一样</p>
-<p>还是只能去空想</p>
-<p>你说Desperate</p>
-<p>可又有谁比我更加渴望和绝望呢？</p>
+        <p>numpy中数据格式有<strong>array</strong>和<strong>mat</strong>，乘法有普通乘号 <code>*</code> 和 <code>dot</code> ，对于初学者（本人也是初学者）来说太容易迷糊了。下面记录一点心得。</p>
+<h3 id="Dot-遵循矩阵乘法"><a href="#Dot-遵循矩阵乘法" class="headerlink" title="Dot : 遵循矩阵乘法"></a><code>Dot</code> : 遵循矩阵乘法</h3><h3 id="It-depends"><a href="#It-depends" class="headerlink" title="* : It depends"></a><code>*</code> : It depends</h3><ul>
+<li>array 相乘：逐元素相乘</li>
+<li>mat相乘：矩阵乘法</li>
+<li>array与mat相乘：矩阵乘法</li>
+</ul>
 
       
     </div>
@@ -349,7 +338,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/日记/" rel="tag"># 日记</a>
+            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
           
         </div>
       
@@ -362,8 +351,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/31/初次制作联机小游戏/" rel="next" title="初次制作联机小游戏">
-                <i class="fa fa-chevron-left"></i> 初次制作联机小游戏
+              <a href="/2019/05/08/d2l-3-2-Linear-Regression-Implementation-from-Scratch/" rel="next" title="d2l-3.2: Linear Regression Implementation from Scratch">
+                <i class="fa fa-chevron-left"></i> d2l-3.2: Linear Regression Implementation from Scratch
               </a>
             
           </div>
@@ -371,10 +360,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/27/高木同学/" rel="prev" title="高木同学">
-                高木同学 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -433,8 +418,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">SE</p>
@@ -500,6 +494,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dot-遵循矩阵乘法"><span class="nav-number">1.</span> <span class="nav-text">Dot : 遵循矩阵乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#It-depends"><span class="nav-number">2.</span> <span class="nav-text">* : It depends</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -660,9 +670,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/01/11/Desperate/';
-          this.page.identifier = '2018/01/11/Desperate/';
-          this.page.title = 'Desperate';
+          this.page.url = 'http://yoursite.com/2019/06/09/Numpy-矩阵乘法/';
+          this.page.identifier = '2019/06/09/Numpy-矩阵乘法/';
+          this.page.title = 'Numpy 矩阵乘法';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Becomebright.disqus.com/embed.js';
