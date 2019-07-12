@@ -69,17 +69,17 @@
 
 
 
-<meta name="description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_() a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   待续">
+<meta name="description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  To be con">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pytorch中的坑">
 <meta property="og:url" content="http://yoursite.com/2019/07/12/Pytorch中的坑/index.html">
 <meta property="og:site_name" content="SE">
-<meta property="og:description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_() a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   待续">
+<meta property="og:description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  To be con">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-12T15:19:15.522Z">
+<meta property="og:updated_time" content="2019-07-12T15:23:11.151Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pytorch中的坑">
-<meta name="twitter:description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_() a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   待续">
+<meta name="twitter:description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  To be con">
 
 
 
@@ -316,12 +316,17 @@
       
         <p>最近在学习 Pytorch，记录一下学习过程中遇到的坑</p>
 <ol>
-<li><code>mul()</code> 和 <code>mul_()</code><ul>
+<li><p><code>mul()</code> 和 <code>mul_()</code></p>
+<ul>
 <li><code>a.mul(2)</code> 会返回 <code>2*a</code> 的结果，但 <code>a</code> 本身不变</li>
 <li><code>a.mul_(2)</code> 无返回值，将 <code>a</code> 本身乘2</li>
 </ul>
 </li>
-<li>待续</li>
+<li><p>如何对 conv 层进行 <strong>weight scale</strong> ?</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> torch.no_grad():</div><div class="line">	self.conv.weight.mul_(weight_scale)</div></pre></td></tr></table></figure>
+</li>
+<li><p>To be continued…</p>
+</li>
 </ol>
 
       
