@@ -69,17 +69,17 @@
 
 
 
-<meta name="description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  To be con">
+<meta name="description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  model.eva">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pytorch中的坑">
 <meta property="og:url" content="http://yoursite.com/2019/07/12/Pytorch中的坑/index.html">
 <meta property="og:site_name" content="SE">
-<meta property="og:description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  To be con">
+<meta property="og:description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  model.eva">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-12T15:23:11.151Z">
+<meta property="og:updated_time" content="2019-07-12T19:10:04.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pytorch中的坑">
-<meta name="twitter:description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  To be con">
+<meta name="twitter:description" content="最近在学习 Pytorch，记录一下学习过程中遇到的坑  mul() 和 mul_()  a.mul(2) 会返回 2*a 的结果，但 a 本身不变 a.mul_(2) 无返回值，将 a 本身乘2   如何对 conv 层进行 weight scale ?  12with torch.no_grad():	self.conv.weight.mul_(weight_scale)  model.eva">
 
 
 
@@ -325,8 +325,22 @@
 <li><p>如何对 conv 层进行 <strong>weight scale</strong> ?</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> torch.no_grad():</div><div class="line">	self.conv.weight.mul_(weight_scale)</div></pre></td></tr></table></figure>
 </li>
-<li><p>To be continued…</p>
+<li><p><code>model.eval()</code> vs <code>with torch.no_grad():</code></p>
+<p> These two have different goals: </p>
+<ul>
+<li>model.eval() will notify all your layers that you are in eval mode, that way, batchnorm or dropout layers will work in eval mode instead of training mode. </li>
+<li>torch.no_grad() impacts the autograd engine and deactivate it. It will reduce memory usage and speed up …</li>
+</ul>
 </li>
+<li><p><code>torch.max(input, dim)</code></p>
+<p> dim=0 取各列的最大值；dim=1取各行的最大值。</p>
+<p> 第一个返回值是最大值，第二个返回值是各返回值的索引</p>
+<p> 如：</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">a = tensor([[<span class="number">-0.8936</span>, <span class="number">-0.8587</span>,  <span class="number">1.1088</span>, <span class="number">-0.6853</span>],</div><div class="line">        [<span class="number">-0.9232</span>, <span class="number">-0.8635</span>,  <span class="number">0.5271</span>,  <span class="number">1.5722</span>],</div><div class="line">        [ <span class="number">0.4393</span>,  <span class="number">1.4082</span>, <span class="number">-0.0143</span>, <span class="number">-1.0777</span>],</div><div class="line">        [<span class="number">-0.4043</span>,  <span class="number">0.5935</span>, <span class="number">-0.2750</span>,  <span class="number">0.7918</span>]])</div><div class="line"></div><div class="line">torch.max(a, <span class="number">1</span>)</div><div class="line">(tensor([<span class="number">1.1088</span>, <span class="number">1.5722</span>, <span class="number">1.4082</span>, <span class="number">0.7918</span>]), tensor([<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">3</span>]))</div><div class="line"></div><div class="line">torch.max(a, <span class="number">0</span>)</div><div class="line">(tensor([<span class="number">0.4393</span>, <span class="number">1.4082</span>, <span class="number">1.1088</span>, <span class="number">1.5722</span>]), tensor([<span class="number">2</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>]))</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>To be continued…</li>
 </ol>
 
       
